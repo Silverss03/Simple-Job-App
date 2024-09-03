@@ -49,12 +49,10 @@ const JobDeatils = () => {
                         points={data[0].job_highlights?.Qualifications ?? ["N/A"]}
                     />
                 );
-
             case "About":
                 return (
                     <JobAbout info={data[0].job_description ?? "No data provided"} />
                 );
-
             case "Responsibilities":
                 return (
                     <Specifics
@@ -62,14 +60,13 @@ const JobDeatils = () => {
                         points={data[0].job_highlights?.Responsibilities ?? ["N/A"]}
                     />
                 );
-
             default:
                 return null;
         }
     };
 
     return (
-        <SafeAreaView>
+        <SafeAreaView style = {{flex : 1, backgroundColor : COLORS.lightWhite}}>
             <Stack.Screen
                 options={{
                     headerStyle: { backgroundColor: COLORS.lightWhite },
@@ -96,8 +93,6 @@ const JobDeatils = () => {
                         <ActivityIndicator size='large' color={COLORS.primary} />
                     ) : error ? (
                         <Text>Something went wrong</Text>
-                    ) : data.length === 0 ? (
-                        <Text>No data available</Text>
                     ) : (
                         <View style={{ padding: SIZES.medium, paddingBottom: 100 }}>
                             <Company
@@ -106,7 +101,6 @@ const JobDeatils = () => {
                                 companyName={data[0].employer_name}
                                 location={data[0].job_country}
                             />
-
                             <JobTabs
                                 tabs={tabs}
                                 activeTab={activeTab}

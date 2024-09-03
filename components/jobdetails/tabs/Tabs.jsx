@@ -14,7 +14,6 @@ function TabButton({ name, activeTab, onHandleSearchType }) {
     </TouchableOpacity>
   );
 }
-
 const Tabs = ({ tabs, activeTab, setActiveTab }) => {
   return (
     <View style={styles.container}>
@@ -35,5 +34,4 @@ const Tabs = ({ tabs, activeTab, setActiveTab }) => {
     </View>
   );
 };
-
 export default Tabs;

@@ -1,7 +1,5 @@
 import { View, Text } from "react-native";
-
 import styles from "./specifics.style";
-
 const Specifics = ({ title, points }) => {
   return (
     <View style={styles.container}>
@@ -18,5 +16,4 @@ const Specifics = ({ title, points }) => {
     </View>
   );
 };
-
 export default Specifics;

@@ -24,7 +24,7 @@ const Home = () => {
             />
             <ScrollView showsVerticalScrollIndicator={false}>
                 <View style={{ flex:1, padding : SIZES.medium}}>
-                    <Welcome earchTerm={searchTerm}
+                    <Welcome searchTerm={searchTerm}
                     setSearchTerm={setSearchTerm}
                     handleClick = {()=>{
                         if(searchTerm){
